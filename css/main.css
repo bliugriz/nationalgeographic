@@ -1,0 +1,464 @@
+
+@font-face {font-family: Cambria; src: url('../fonts/Cambria.woff'); }
+@font-face {font-family: CambriaBold; src: url('../fonts/Cambria-Bold.woff2'); }
+@font-face {font-family: NeueHaasGroteskMBold; src: url('../fonts/NeueHaasGroteskMBold.woff2'); }
+@font-face {font-family: NeueHaasGrotesk; src: url('../fonts/NeueHaasGrotesk.woff2'); }
+
+#header{
+	z-index: 56;
+	position:fixed;
+	padding-top:0.8vw;
+	padding-left:4vw;
+	width:100%;
+	height:8vh;
+	overflow: hidden;
+	color:white;
+	background-color: black;
+}
+h3 {
+margin-bottom: 2vh;
+	margin-top:2vh;
+	margin-left:5vw;
+	color:lightgrey;
+	font-size: 3vh;
+	letter-spacing:9px;
+	font-family: NeueHaasGrotesk, san-serif;
+}
+h5 {
+	font-family: NeueHaasGroteskMBold, san-serif;
+	font-size:1.6vh;
+	text-indent: 1vw; 
+}
+
+#menuIcon {
+	height:50px; 
+	width: 50 px;
+}
+#menu {
+	background-color: #222;
+	position:fixed;
+	z-index:50;
+	height: 100%;
+	width:40%;
+	margin-left:-1vw;
+	display:none;
+	right:0;
+}
+#menuColumn1 {
+	position:relative;
+	float:left;
+	color:#FFCD05;
+	padding-left:5vw;
+	width: 38vw;
+	/* border-right:1px solid #FFCD05; */
+}
+#menuColumn2 {
+	position:relative;
+	float:left;
+	color:#FFCD05;
+	padding-left:3vw;
+	width: 36vw;
+	/* border-left:1px solid #FFCD05;  */
+}
+#menuColumn3 {
+	padding-top:2vh;
+	position:relative;
+	float:left;
+	color:#FFCD05;
+	padding-left:5vw;
+	width: 18vw;
+	/* border-left:1px solid #FFCD05;  */
+}
+#search {
+	position:fixed;
+	z-index:30;
+	background-color: rgba(34, 34, 34, 0.94);
+	padding-top: 45vh;
+	height: 100vh;
+	width: 101%;
+	top:0;
+	left:0;
+	text-align:center;
+	display:none; 
+}
+input {
+    width: 80%;
+	height: 6vh;
+	font-family: NeueHaasGrotesk, san-serif;
+	letter-spacing:2px;
+	font-size: 2vh;
+	border: none;
+	border-bottom:1px solid grey;
+	background:#222;
+	color:white;
+}
+#icons {
+	position:absolute;
+	right: 3vw;
+	top:1.8vw;
+}
+#icons > img {
+	margin-left:2vw;
+}
+#menu > p {
+	position:absolute;
+	margin-top:0.5vh;
+	right:1vw;
+	text-align:left;
+	color:grey;
+	font-size: 1vh;
+	font-family: NeueHaasGrotesk, san-serif;
+}
+#menuColumn1 > p {
+	margin-bottom: 2vh;
+	margin-top:3vh;
+	color:#FFCD05;
+	font-size: 2.2vh;
+	letter-spacing:5px;
+	font-family: NeueHaasGroteskMBold, san-serif;
+	line-height:2.5vh;
+}
+
+
+#menuColumn1 > img {
+	margin-top: -2vh;
+	margin-right: 1vw;
+}
+* {box-sizing:border-box}
+body {margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  top:8vh;
+  margin: auto;
+  overflow:hidden;
+  height: 45vh;
+  background-color:black;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  z-index:20;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#gradient1 {
+	position:absolute;
+	z-index: 2;
+	width:100vw;
+	height: 100%;
+	background: black; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) , black); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, rgba(0, 0, 0, 0) , black); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0) , black); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, rgba(0, 0, 0, 0) , black); /* Standard syntax */
+}
+#gradient2 {
+	width:101vw;
+	height:100%;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, black, rgba(0, 0, 0, 0)); /* Standard syntax */
+}
+#gradient3 {
+	width:101vw;
+	height:100%;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, rgba(0, 0, 0, 0) , black); /* Standard syntax */
+}
+#pokalbisText {
+	color:white;
+	right:4vw;
+}
+#introBodyText {
+	right: 6.5vw;
+	width: 31vw;
+	margin-top: 14vh;
+}
+.bodyText {
+	font-family: Cambria, san-serif;
+	font-size:1.2vh;
+	letter-spacing: 1px; 
+	line-height:1.6vh; 
+	position:absolute;
+	margin-top: 13vh;
+	margin-left:6vw;
+	color:white;
+}
+.titleText {
+	margin-left: 6vw;
+	padding-left:4vw;
+	margin-top:4vh;
+	letter-spacing: 6px;
+	position:absolute;
+	font-family: NeueHaasGrotesk, san-serif;
+	font-size:3vh;
+	border-left: 2px solid #FFCD05;
+}
+#tyrinek {
+	margin-top: 8vh;
+	margin-left:-1vw;	
+	width:101vw;
+	height:35vh;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+a {
+	text-decoration:none;
+	color: grey;
+	text-transform: uppercase;
+	font-family: NeueHaasGrotesk, san-serif;
+	letter-spacing: 5px;
+
+}
+.regular-class {
+	margin-top:10%;
+}
+#vikingai {
+	margin-left:-1vw;
+	width:101vw;
+	height:40vh;
+	background-color:black;
+	background-image:url("../images/vikings1.jpg");
+	/* background-position:center; */
+	background-size:120%;
+	background-repeat:no-repeat;
+	background-position: 0% 30%;
+}
+#vikingaiText {
+	color:white;
+	margin-left: 6.5vw;
+	margin-top:4vh;
+	letter-spacing: 11px;
+	position:absolute;
+	font-family: NeueHaasGroteskMBold, san-serif;
+	font-size:6vh;
+}
+#vaizdaiText {
+	color:white;
+	right:17vw;
+}
+#vaizdaiBodyText {
+	width: 30vw;
+}
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 100%;
+        margin: 100px 0px 0px 0px;
+    }
+
+    .slick-slide {
+      margin: 0px 0px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+	
+#kitiStraipsniai {
+	margin-left:-1vw;	
+	width:101vw;
+	height:35vh;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	color:white;
+	background-color: #222;
+}
+#vaizdai {
+	margin-left:-1vw;
+	width:101vw;
+	height:40vh;
+	background-color:black;
+	background-image:url("../images/shrooms.jpg");
+	/* background-position:center; */
+	background-size:120%;
+	background-repeat:no-repeat;
+	background-position: 0% 30%;
+}
+
+#pokalbis {
+	margin-left:-1vw;
+	width:101vw;
+	height:40vh;
+	border: 0.5px solid black;
+}
+#pokalbisImage {
+	background-color:black;
+	background-image:url("../images/zvaigzdes.jpg");
+	background-position:center; 
+	background-size:cover;
+	background-repeat:no-repeat;
+	width: 40vw;
+	height: 40vh;
+	position: absolute;
+	right: 5vw;
+}
+
+#pokalbisBodyText {
+	width: 35vw;
+	color: black;
+	margin-left:10vw;
+}
+#video {
+	position:fixed;
+	z-index:30;
+	background-color: black;
+	padding-top: 25vh;
+	height: 100%;
+	width: 101vw;
+	top:0;
+	left:0;
+	text-align:center;
+	display:none; 
+}
+#press1 {
+	font-family: NeueHaasGrotesk, san-serif;
+	font-size:1vh;
+	color:white;
+	position: absolute;
+	top: -13vh;
+	left: -61vw;
+	z-index:25;
+	text-transform: uppercase;
+}
+#press2 {
+	font-family: NeueHaasGrotesk, san-serif;
+	font-size:1vh;
+	color:white;
+	position: absolute;
+	top: -12.5vh;
+	left: 74vw;
+	z-index:25;
+	text-transform: uppercase;
+}
+#footer{
+	padding-top: 1vh;
+	margin-left:-1vw;	
+	width:101vw;
+	height:8vh;
+	overflow: hidden;
+	color:#FFCD05;
+	background-color: #222;
+	text-align:center;
+	
+}
+#footer > a {
+	margin-left: 3vw;
+	margin-right: 3vw;
+	color: grey;
+	font-size: 1.8vw;
+}
+#footer > p {
+	position:absolute;
+	margin-top:0.5vh;
+	right:1vw;
+	text-align:left;
+	color:grey;
+	font-size: 1vh;
+	font-family: NeueHaasGrotesk, san-serif;
+}
+#logo1 {
+	margin-top:0.7vh;
+	height:1.8vh;
+	position:absolute;
+	left:7vw;
+}
+#logo2 {
+	margin-top:0.7vh;
+	height:2.2vh;
+	position:absolute;
+	left:25vw;
+}
+#logo3 {
+	margin-top:0.7vh;
+	height:2.25vh;
+	position:absolute;
+	left:38vw;
+}
+.line-separator{
+	height:1px;
+	width:96vw;
+	margin-left:3vw;
+	margin-bottom: 0.5vh;
+	border-bottom:1px solid #FFCD05;
+}
+.line-separator2{
+	height:1px;
+	width:34vw;
+	margin-top:1vh;
+	margin-bottom:vh;
+	margin-left:1vw;
+	border-bottom:1px solid #FFCD05;
+}
