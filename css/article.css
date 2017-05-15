@@ -1,12 +1,12 @@
 
 @font-face {font-family: Cambria; src: url('../fonts/Cambria.woff',
-url('../fonts/Cambria.svg') format('svg');); }
+url('../fonts/Cambria.svg') format('svg');) !important }
 @font-face {font-family: CambriaBold; src: url('../fonts/Cambria-Bold.woff2',
-url('../fonts/Cambria-Bold.svg') format('svg');); }
+url('../fonts/Cambria-Bold.svg') format('svg');)!important }
 @font-face {font-family: NeueHaasGrotesk; src: url('../fonts/NeueHaasGrotesk.woff2',
-url('../fonts/NeueHaasGroteskDispW04-55Rm.svg') format('svg');); }
+url('../fonts/NeueHaasGroteskDispW04-55Rm.svg') format('svg');) !important }
 @font-face {font-family: NeueHaasGroteskMBold; src: url('../fonts/NeueHaasGroteskMBold.woff2',
-url('../fonts/NeueHaasGroteskDispW04-65Md.svg') format('svg')); }
+url('../fonts/NeueHaasGroteskDispW04-65Md.svg') format('svg')) !important }
 
 #header{
 	z-index: 56;
