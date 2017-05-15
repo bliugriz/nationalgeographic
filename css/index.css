@@ -1,7 +1,11 @@
-@font-face {font-family: Cambria; src: url('../fonts/Cambria.woff'); }
-@font-face {font-family: CambriaBold; src: url('../fonts/Cambria-Bold.woff2'); }
-@font-face {font-family: CambriaBoldItalic; src: url('../fonts/Cambria-BoldItalic.woff2'); }
-@font-face {font-family: NeueHaasGrotesk; src: url('../fonts/NeueHaasGrotesk.woff2'); }
+@font-face {font-family: Cambria; src: url('../fonts/Cambria.woff',
+url('../fonts/Cambria.svg') format('svg');); }
+@font-face {font-family: CambriaBold; src: url('../fonts/Cambria-Bold.woff2',
+url('../fonts/Cambria-Bold.svg') format('svg'););); }
+@font-face {font-family: CambriaBoldItalic; src: url('../fonts/Cambria-BoldItalic.woff2',
+url('../fonts/Cambria-BoldItalic.svg') format('svg'););); }
+@font-face {font-family: NeueHaasGrotesk; src: url('../fonts/NeueHaasGrotesk.woff2',
+url('../fonts/NeueHaasGroteskDispW04-55Rm.svg') format('svg'););); }
 
 body {
 	color:white;
